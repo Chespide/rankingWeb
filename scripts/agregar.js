@@ -9,7 +9,7 @@ export default function() {
         const puntaje = parseInt(formData.get('puntaje'), 10);
 
         try {
-            const res = await fetch('http://localhost:3000/ranking', {
+            const res = await fetch('https://pruebamicroservices.onrender.com/ranking', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ jugador, puntaje }),

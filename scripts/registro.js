@@ -10,7 +10,7 @@ export default function() {
         const contraseña = formData.get('contraseña');
 
         try {
-            const res = await fetch('http://localhost:3000/usuarios', {
+            const res = await fetch('https://pruebamicroservices.onrender.com/usuarios', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nombre, correo, contraseña }),

@@ -3,7 +3,7 @@ export default async function() {
     tbody.innerHTML = 'Cargando...';
 
     try {
-        const res = await fetch('http://localhost:3000/ranking');
+        const res = await fetch('https://pruebamicroservices.onrender.com/ranking');
         if (!res.ok) throw new Error('Error al obtener ranking');
         const data = await res.json();
 

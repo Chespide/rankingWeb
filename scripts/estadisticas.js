@@ -1,7 +1,7 @@
 export default async function() {
     const cont = document.getElementById('estadisticas-content');
     try {
-        const res = await fetch('http://localhost:3000/estadisticas');
+        const res = await fetch('https://pruebamicroservices.onrender.com/estadisticas');
         if (!res.ok) throw new Error('Error al obtener estadísticas');
         const data = await res.json();
 

@@ -12,7 +12,7 @@ export default function () {
 
     async function cargarAvances() {
         try {
-            const res = await fetch(`http://localhost:3000/avances/${usuarioId}`);
+            const res = await fetch(`https://pruebamicroservices.onrender.com/avances/${usuarioId}`);
             if (!res.ok) throw new Error('Error al cargar avances');
             const data = await res.json();
 
@@ -39,7 +39,7 @@ export default function () {
         const porcentaje = parseInt(formData.get('porcentaje'), 10);
 
         try {
-            const res = await fetch('http://localhost:3000/avances', {
+            const res = await fetch('https://pruebamicroservices.onrender.com/avances', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ usuarioId, tema, porcentaje }),
